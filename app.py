@@ -19,8 +19,7 @@ st.set_page_config(
 )
 
 ROOT = Path(__file__).resolve().parent
-MODELS = ROOT / "models"
-
+MODELS = ROOT / "models" if (ROOT / "models" / "modele_banque.keras").is_file() else ROOT
 NAMES = [
     "Avion", "Automobile", "Oiseau", "Chat", "Cerf",
     "Chien", "Grenouille", "Cheval", "Bateau", "Camion",
